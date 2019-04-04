@@ -1,0 +1,230 @@
+digraph G {
+    # ----------------------
+    # Ocaml libraries
+        # https://github.com/o1-labs/snarky
+        "snarky" [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white];
+        "snarky" -> "R1CS";
+        
+    # -----------------------
+    # Haskell libraries
+        # https://github.com/adjoint-io/bulletproofs/
+        "adjoint-io/bulletproofs" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "adjoint-io/bulletproofs" -> "Bulletproofs";
+    
+    # ----------------------
+    # Rust libraries
+        # https://github.com/matter-labs/bellman/
+        # https://github.com/zkcrypto/bellman
+        # https://github.com/zcash/librustzcash/tree/master/bellman
+        "Bellman" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+    
+        # https://github.com/scipr-lab/zexe/
+        "zexe" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+
+        # https://doc-internal.dalek.rs/bulletproofs/index.html
+        # https://github.com/dalek-cryptography/bulletproofs/
+        "dalek-cryptography" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+
+    # ----------------------
+    # Compilers
+        # https://gitlab.com/securityengineering/CBMC-GC-2
+        "CBMC-GC-2" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white];
+        "C" -> "CBMC-GC-2";
+        "CBMC-GC-2" -> "Bristol";
+        "CBMC-GC-2" -> "SHDL";
+        "CBMC-GC-2" -> "SCD";
+        
+        # https://github.com/Ethsnarks/ethsnarks-pinocchio
+        "Pinocchio Compiler" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white];
+        
+        # https://github.com/Ethsnarks/ethsnarks-sfdl
+        # https://thomaschneider.de/FairplayPF/
+        "FairPlayPF" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white];
+        "SFDL" -> "FairPlayPF";
+        "FairPlayPF" -> "SHDL";
+        
+        # https://github.com/corda/msr-vc/tree/master/geppetto/code
+        "Gappetto" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white];
+
+    # -----------------------
+    # C/C++ libraries
+        # https://github.com/mimblewimble/secp256k1-zkp
+        # https://github.com/ElementsProject/secp256k1-zkp
+        "libsecp256k1-mw" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        
+        # https://github.com/scipr-lab/libsnark/
+        "libsnark" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        
+        # https://github.com/mstraka100/bulletproofs_preprocess
+        "bulletproofs_preprocess" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white];
+        "bulletproofs_preprocess" -> "andytoshi";
+        # https://github.com/suiguangye/Aggregate-Gamma-Signature/tree/master/secp256k1-mw-GammaFull/src/modules/bulletproofs
+        "andytoshi" -> "libsecp256k1-mw" ;
+    
+        
+    # -------------------
+    # Java Libraries
+        # https://www2.eecs.berkeley.edu/Pubs/TechRpts/2018/EECS-2018-78.pdf
+        # https://github.com/scipr-lab/dizk
+        "DIZK" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "R1CS" -> "DIZK";   # https://github.com/scipr-lab/dizk/tree/master/src/main/java/reductions/r1cs_to_qap
+        "DIZK" -> "Gro16";  # https://github.com/scipr-lab/dizk/tree/master/src/main/java/zk_proof_systems/zkSNARK
+
+        "jsnark"  [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white];
+        
+        # https://github.com/encryptogroup/UC/blob/master/src/bristol_to_SHDL.cpp
+        "Bristol" -> "SHDL";
+
+    # ---------------------
+    # Javascript libraries
+        # https://github.com/iden3/snarkjs
+        "snarkjs" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+    
+    # -------------------------
+    # MPC / Garbled Circuit libraries
+    
+        # https://cseweb.ucsd.edu/groups/justgarble/README
+        # https://github.com/irdan/justGarble
+        "justGarble" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "SCD" -> "justGarble";
+        
+        # https://github.com/esonghori/TinyGarble
+        "TinyGarble" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "SCD" -> "TinyGarble";
+
+    # ------------------
+    # Underlying technologies
+        # https://eprint.iacr.org/2017/1066.pdf
+        "Bulletproofs" [shape=box, fillcolor=cornsilk3, style=filled];
+
+        "zkSNARK" [shape=box, fillcolor=cornsilk3, style=filled];
+
+        # https://github.com/hyraxZK/hyraxZK
+        "Hyrax" [shape=box, fillcolor=cornsilk3, style=filled];
+    
+    # ------------------
+    # High-level languages
+        "C" [shape=box, fillcolor=gold, style=filled];
+    
+        # https://github.com/akosba/xjsnark
+        "xjsnark" [shape=box, fillcolor=gold, style=filled];
+
+        # https://github.com/Zokrates/ZoKrates/
+        "Zokrates" [shape=box, fillcolor=gold, style=filled];
+
+        # https://github.com/iden3/circom
+        "Circom" [shape=box, fillcolor=gold, style=filled];
+        
+        # http://www.cs.huji.ac.il/project/Fairplay/Fairplay/Fairplay.pdf
+        # https://github.com/FaiplayMP/FairplayMP
+        "SFDL" [shape=box, fillcolor=gold, style=filled];
+        
+        "Verilog" [shape=box, fillcolor=gold, style=filled];
+        # https://github.com/esonghori/TinyGarble/blob/master/scd/v_2_scd.cpp
+        # https://github.com/esonghori/circuit_synthesis
+        "Verilog" -> "SCD";
+
+    # -----------------------------
+    # Intermediate forms
+        # https://github.com/interstellar/slingshot/tree/main/zkvm
+        "zkVM" [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white];
+        "zkVM" -> "dalek-cryptography";
+        
+        # https://github.com/irdan/justGarble/blob/master/scd/SCD_Format
+        # https://github.com/ciphron/scdf
+        "SCD" [shape=box, fillcolor=cyan, style=filled];
+        
+        "andytoshi" [shape=box, fillcolor=cyan, style=filled];
+        
+        # https://github.com/Ethsnarks/ethsnarks-il/tree/master/cxx
+        "Pinocchio" [shape=box, fillcolor=cyan, style=filled];
+        
+        "Prover Worksheet" [shape=box, fillcolor=cyan, style=filled];
+        "R1CS" [shape=box, fillcolor=blue, style=filled, fontcolor=white];
+        
+        # https://homes.esat.kuleuven.be/~nsmart/MPC/
+        "Bristol" [shape=box, fillcolor=cyan, style=filled];
+        
+        # http://www.cs.huji.ac.il/project/Fairplay/Fairplay/Fairplay.pdf
+        # https://github.com/ciphron/sfdl_to_scdl
+        "SHDL" [shape=box, fillcolor=cyan, style=filled];
+        # https://github.com/Ethsnarks/ethsnarks-sfdl/blob/master/shdl2ethsnarks.py
+        "SHDL" -> "Pinocchio";
+    
+    "C" -> "Pepper Project";
+    "Pepper Project" -> "Prover Worksheet";
+    
+    "LLVM IR" [shape=box, fillcolor=cyan, style=filled];
+    
+    # zkSNARK algorithms / papers
+    subgraph cluster_6 {
+        # https://eprint.iacr.org/2016/260.pdf
+        "Gro16" [fillcolor=burlywood2, style=filled];
+        
+        # https://github.com/zknuckles/sonic
+        "SONIC" [fillcolor=burlywood2, style=filled];
+    
+        # https://eprint.iacr.org/2013/279.pdf
+        "PGHR13" [fillcolor=burlywood2, style=filled];
+    
+        # https://eprint.iacr.org/2017/540.pdf
+        "GM17" [fillcolor=burlywood2, style=filled];
+    }
+    
+    subgraph cluster_7 {
+        "SAP" [fillcolor=bisque, style=filled];
+        "QAP" [fillcolor=bisque, style=filled];
+    }
+    
+    "Pinocchio Compiler" -> "Pinocchio";
+    "C" -> "Pinocchio Compiler";
+    "C" -> "LLVM IR";
+
+    "LLVM IR" -> "Gappetto";
+    "Gappetto" -> "QAP";
+    
+    "R1CS" -> "zexe";
+    "zexe" -> "GM17";
+    "libsnark" -> "GM17";
+    "libsnark" -> "Gro16";
+    "libsnark" -> "PGHR13";
+    "snarkjs" -> "Gro16";
+    "snarkjs" -> "PGHR13";
+    "Bellman" -> "SONIC";
+    "SONIC" -> "zkSNARK";
+    "Bellman" -> "Gro16";
+    "Bellman" -> "GM17";
+    
+    "PGHR13" -> "QAP";
+
+    "GM17" -> "SAP";
+    "SAP" -> "zkSNARK";
+
+    "Gro16" -> "QAP";
+    "QAP" -> "zkSNARK";
+      
+  "jsnark" -> "Pinocchio";
+  "xjsnark" -> "Pinocchio";
+  "Pinocchio" -> "R1CS";
+  
+  # https://doc.dalek.rs/develop/bulletproofs/r1cs/index.html
+  # https://doc-internal.dalek.rs/develop/bulletproofs/notes/r1cs_proof/index.html
+  "R1CS" -> "dalek-cryptography" ;
+  
+  "R1CS" -> "Bellman" ;
+  "R1CS" -> "libsnark" ;
+ 
+  "Zokrates" -> "R1CS";
+  
+  "Circom" -> "R1CS";
+  "R1CS" -> "snarkjs";
+ 
+  # https://github.com/mstraka100/bulletproofs_preprocess/blob/master/pinocchio.py
+  "Pinocchio" -> ".program";
+  ".program" -> "bulletproofs_preprocess";
+  
+  "libsecp256k1-mw" -> "Bulletproofs";
+  "dalek-cryptography" -> "Bulletproofs";
+  "Prover Worksheet" -> "Hyrax";
+  "Prover Worksheet" -> "R1CS";
+}
