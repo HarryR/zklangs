@@ -144,6 +144,7 @@ digraph G {
         
         # https://homes.esat.kuleuven.be/~nsmart/MPC/
         "Bristol" [shape=box, fillcolor=cyan, style=filled];
+        "Bristol" -> "SCD";
         
         # http://www.cs.huji.ac.il/project/Fairplay/Fairplay/Fairplay.pdf
         # https://github.com/ciphron/sfdl_to_scdl
