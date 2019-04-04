@@ -105,6 +105,48 @@ https://github.com/Ethsnarks/ethsnarks-il/tree/master/cxx
 
  * https://homes.esat.kuleuven.be/~nsmart/MPC/
 
+This file format is suited for the representation of sequential binary circuits, where each wire represents a bit.
+
+To understand the format: Each file consists of:
+
+ * A line defining the number of gates and then the number of wires in the circuit.
+ * Then two numbers defining the number n<sub>1</sub> and n<sub>2</sub> of wires in the inputs to the function given by the circuit.
+   * We assume the function has at most two inputs; since most of our examples do. If the function has only one input then the second inputs size is set to zero.
+ * Then on the same line comes the number of wires in the output n<sub>3</sub>.
+ * The wires are ordered so that the first n<sub>1</sub> wires correspond to the first input value, the next n<sub>2</sub> wires correspond to the second input value. The last n<sub>3</sub> wires correspond to the output of the circuit.
+ * After this the gates are listed in the format:
+   * Number input wires
+   * Number output wires
+   * List of input wires
+   * List of output wires
+   * Gate operation (`XOR`, `AND` or `INV`)
+
+So for example:
+```
+2 1 3 4 5 XOR
+```
+corresponds to:
+```
+w5 = XOR(w3, w4)
+```
+
+### Examples:
+
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/AES-non-expanded.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/AES-expanded.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/DES-non-expanded.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/DES-expanded.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/md5.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/sha-1.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/sha-256.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/adder_32bit.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/adder_64bit.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/mult_32x32.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_signed_lteq.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_signed_lt.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_unsigned_lteq.txt
+ * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_unsigned_lt.txt
+
 ### Converts to
 
  * [SHDL](https://github.com/encryptogroup/UC/blob/master/src/bristol_to_SHDL.cpp)
