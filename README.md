@@ -34,6 +34,33 @@
 
 ## SFDL
 
+The 'Secure Function Definition Language' was defined by the FairPlay MPC project, it is compiled into the intermediate-form 'SHDL' - the 'Secure Hardware Definition Language' - where statements are decomposed into single-static-assignment circuit form operating on individual bits. The FairPlay compiler is not only well suited for MPC, but ebcause it compiles down to operations on individual bits it's also well suited for general garbled circuits and fully-homomorphic-encryption.
+
+### Examples
+
+```javascript
+program And {
+	type Byte = Int<8>;
+	type AliceInput = Byte;
+	type BobInput = Byte;
+	type AliceOutput = Byte; 
+	type BobOutput = Byte; 
+	type Input = struct {AliceInput alice,	BobInput bob};
+	type Output = struct {AliceOutput alice, BobOutput bob};
+
+	function Output output(Input input) {
+           output.alice = (input.bob & input.alice);
+           output.bob = (input.bob & input.alice);
+	}
+}
+```
+
+ * [And.sfdl](https://raw.githubusercontent.com/tugend/Jalapeno/6469218e3515269d4fdb026758a7e6d2510cb86b/examples/fairplay_millionaires/injections/example/run/progs/And.txt)
+ * [Billionaires.sfdl](https://raw.githubusercontent.com/tugend/Jalapeno/6469218e3515269d4fdb026758a7e6d2510cb86b/examples/fairplay_millionaires/injections/example/run/progs/Billionaires.txt)
+ * [KDS.sfdl](https://github.com/tugend/Jalapeno/blob/6469218e3515269d4fdb026758a7e6d2510cb86b/examples/fairplay_millionaires/injections/example/run/progs/KDS.txt)
+ * [Median.sfdl](https://raw.githubusercontent.com/tugend/Jalapeno/6469218e3515269d4fdb026758a7e6d2510cb86b/examples/fairplay_millionaires/injections/example/run/progs/Median.txt)
+ * [Millionaires.sfdl](https://github.com/tugend/Jalapeno/blob/6469218e3515269d4fdb026758a7e6d2510cb86b/examples/fairplay_millionaires/injections/example/run/progs/Millionaires.txt)
+
 ## Circom
 
 ## Verilog
@@ -51,9 +78,11 @@ The [circuit_synthesis](https://github.com/esonghori/circuit_synthesis) reposito
 
 ## SCDL
 
-> Simple Circuit Description Language - simple functional language to describe circuits with a very basic implementation of a "compiler"
+> Simple Circuit Description Language - simple functional language to describe circuits with a very basic implementation of a "compiler".
 
  - https://github.com/ciphron/scdl
+
+ Using single-line expressions in a somewhat functional style this semi-high-level language bridges the gap between high-level and low-level.
 
 ### Example:
 
@@ -70,6 +99,8 @@ func out = gt(A, B)
 ```
 
 # Intermediate Forms
+
+Intermediate forms are simplified low-level representations which require little to no complex parsing.
 
 ## Pinocchio
 
@@ -89,25 +120,25 @@ https://github.com/Ethsnarks/ethsnarks-il/tree/master/cxx
   circuit topology (a description with gate types are unspecified). Circuits
   are modeled closely after Foundations of garbled circuits by Bellare, Hoang 
   and Roagaway, available from eprint.iacr.org. Here a circuit is a 6-tuple
-  f= (n, m, q, A, B, G, O) where n,m, and q are integers representing 
+  `f = (n, m, q, A, B, G, O)` where `n`, `m`, and `q` are integers representing 
   the number of inputs, outputs, and gates in the circuit. 
 
-> Consider a simple circuit implementing f(a_1,a_2,a_3) = (a_1 & a_2) | a_3. 
+> Consider a simple circuit implementing `f(a_1,a_2,a_3) = (a_1 & a_2) | a_3`.
   There are three inputs, one output, two gates, and five logical wires. We 
   will add the extra dummy wire to make it six wires overall. An SCD 
   representation of this circuit could be as follows:
-  (3, 1, 2, [1,4], [2,3], [8, 14], [5]), indicating that there are 3 inputs, 
-  1 output, 2 gates, the first inputs to the gates are 1, 4, the second inputs
-  are 2, 3, the gate types are 8 = 1000 = AND, and 14 = 1110 = OR, and the 
-  output of the circuit is wire 5.
+  `(3, 1, 2, [1,4], [2,3], [8, 14], [5])`, indicating that there are 3 inputs, 
+  1 output and 2 gates, the first inputs to the gates are `1` and `4`, the second inputs
+  are `2` and `3`, the gate types are `8 = 1000 = AND`, and `14 = 1110 = OR`, and the 
+  output of the circuit is wire `5`.
 
-## Bristol MPC
+## Bristol
 
  * https://homes.esat.kuleuven.be/~nsmart/MPC/
 
-This file format is suited for the representation of sequential binary circuits, where each wire represents a bit.
+This file format is suited for the representation of sequential binary circuits, where each wire represents a single bit.
 
-To understand the format: Each file consists of:
+To understand the format, each file consists of:
 
  * A line defining the number of gates and then the number of wires in the circuit.
  * Then two numbers defining the number n<sub>1</sub> and n<sub>2</sub> of wires in the inputs to the function given by the circuit.
