@@ -1,6 +1,13 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
 # High-Level languages for zkSNARKs, Fully-Homomorphic-Encryption and Multi-Party-Computation
 
-![High-Level-Graph](hll-graph.png)
+<object width="100%" data="hll-graph.svg" type="image/svg+xml"></object>
+![High-Level-Graph](hll-graph.svg)
 
 # zkSNARKs
 
@@ -108,7 +115,7 @@ https://github.com/Ethsnarks/ethsnarks-il/tree/master/cxx
 
 ## Prover Worksheet
 
-## SHDL - Secure Hardware Definition Language
+## SHDL
 
 ## andytoshi
 

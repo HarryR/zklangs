@@ -1,0 +1,15 @@
+title: HLL
+description: Dinky is a red hot theme for GitHub Pages.
+
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
+exclude:
+ - Makefile
+ - vendor/
+ - Gemfile
+ - Gemfile.lock

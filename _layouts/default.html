@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="blog, accent, {{ site.author }}, {{ site.title }}" />
+    <meta name="author" content="{{ site.author }}" />
+
+    {% if page.url == "/404.html" %}
+        <meta http-equiv="refresh" content="5; url=/">
+    {% endif %}
+
+    {% if page.description %}
+        {% assign desc = page.description %}
+    {% else %}
+        {% assign desc = site.description %}
+    {% endif %}
+
+    {% if page.url %}
+        {% assign url = site.url | append: site.baseurl | append: page.url %}
+    {% else %}
+        {% assign url = site.url | append: site.baseurl | append: page.url %}
+    {% endif %}
+
+    <meta name="description" content="{{ desc }}" />
+
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/css/syntax.css' | relative_url }}" />
+    <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" /> -->
+
+    {% if site.favicon %}
+        <link rel="icon" type="image/ico" href="{{ site.favicon_location }}">
+        <link rel="shortcut-icon" type="image/ico" href="{{ site.favicon_location }}">
+    {% endif %}
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar container">
+            {% if site.ins_logo %}
+                <img id="ins-logo" src="{{ site.ins_logo }}" />
+            {% endif %}
+            <a id="author-name" class="alignable pull-left" href="{{ site.baseurl }}">{{ site.title }}</a>
+            <ul id="navlist" class="alignable pull-right navbar-ul">
+                {% for x in site.nav %}
+                    <li class="alignable pull-left nav-list">
+                    {% if x.name == "Resume" %}
+                        <a target="_blank" href="{{ x.link }}">{{ x.name }}</a>
+                    {% else %}
+                        <a href="{{ x.link }}">{{ x.name }}</a>
+                    {% endif %}
+                    {% if forloop.last == false %}
+                        /
+                    {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div><!-- .navbar -->
+
+        <div style="clear:both"></div>
+        <hr />
+
+        <div class="container content {% if page.is_contact == true %}contact{% endif %}">    
+            {{ content }}
+            {% if site.footer == true %}
+                <hr />
+                <p style="text-align: center; margin-bottom: 10px">
+                <a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
+                </p>
+            {% endif %}
+        </div><!-- .content -->
+    </div><!-- .wrapper -->
+</body>
+</html>

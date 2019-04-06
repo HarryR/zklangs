@@ -104,22 +104,22 @@ digraph G {
     
     # ------------------
     # High-level languages
-        "C" [shape=box, fillcolor=gold, style=filled];
+        "C" [shape=box, fillcolor=gold, style=filled, href="./#c", target="_top"];
     
         # https://github.com/akosba/xjsnark
-        "xjsnark" [shape=box, fillcolor=gold, style=filled];
+        "xjsnark" [shape=box, fillcolor=gold, style=filled, href="./#xjsnark", target="_top"];
 
         # https://github.com/Zokrates/ZoKrates/
-        "Zokrates" [shape=box, fillcolor=gold, style=filled];
+        "Zokrates" [shape=box, fillcolor=gold, style=filled, href="./#zokrates", target="_top"];
 
         # https://github.com/iden3/circom
-        "Circom" [shape=box, fillcolor=gold, style=filled];
+        "Circom" [shape=box, fillcolor=gold, style=filled, href="./#circom", target="_top"];
         
         # http://www.cs.huji.ac.il/project/Fairplay/Fairplay/Fairplay.pdf
         # https://github.com/FaiplayMP/FairplayMP
-        "SFDL" [shape=box, fillcolor=gold, style=filled];
+        "SFDL" [shape=box, fillcolor=gold, style=filled, href="./#sfdl", target="_top"];
         
-        "Verilog" [shape=box, fillcolor=gold, style=filled];
+        "Verilog" [shape=box, fillcolor=gold, style=filled, href="./#verilog", target="_top"];
         # https://github.com/esonghori/TinyGarble/blob/master/scd/v_2_scd.cpp
         # https://github.com/esonghori/circuit_synthesis
         "Verilog" -> "SCD";
@@ -132,23 +132,23 @@ digraph G {
         
         # https://github.com/irdan/justGarble/blob/master/scd/SCD_Format
         # https://github.com/ciphron/scdf
-        "SCD" [shape=box, fillcolor=cyan, style=filled];
+        "SCD" [shape=box, fillcolor=cyan, style=filled, href="./#scd", target="_top"];
         
-        "andytoshi" [shape=box, fillcolor=cyan, style=filled];
+        "andytoshi" [shape=box, fillcolor=cyan, style=filled, href="./#andytoshi", target="_top"];
         
         # https://github.com/Ethsnarks/ethsnarks-il/tree/master/cxx
-        "Pinocchio" [shape=box, fillcolor=cyan, style=filled];
+        "Pinocchio" [shape=box, fillcolor=cyan, style=filled, href="./#pinocchio", target="_top"];
         
-        "Prover Worksheet" [shape=box, fillcolor=cyan, style=filled];
+        "Prover Worksheet" [shape=box, fillcolor=cyan, style=filled, href="./#prover-worksheet", target="_top"];
         "R1CS" [shape=box, fillcolor=blue, style=filled, fontcolor=white];
         
         # https://homes.esat.kuleuven.be/~nsmart/MPC/
-        "Bristol" [shape=box, fillcolor=cyan, style=filled];
+        "Bristol" [shape=box, fillcolor=cyan, style=filled, href="./#bristol", target="_top"];
         "Bristol" -> "SCD";
         
         # http://www.cs.huji.ac.il/project/Fairplay/Fairplay/Fairplay.pdf
         # https://github.com/ciphron/sfdl_to_scdl
-        "SHDL" [shape=box, fillcolor=cyan, style=filled];
+        "SHDL" [shape=box, fillcolor=cyan, style=filled, href="./#shdl", target="_top"];
         # https://github.com/Ethsnarks/ethsnarks-sfdl/blob/master/shdl2ethsnarks.py
         "SHDL" -> "Pinocchio";
     
