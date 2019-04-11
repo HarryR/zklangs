@@ -127,5 +127,10 @@ hr {
 	}
 }
 
+div.highlight {
+   background: #444;
+   padding: 10px; 
+}
+
 @import "typography";
 @import "tables";

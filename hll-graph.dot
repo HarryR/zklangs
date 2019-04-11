@@ -2,7 +2,7 @@ digraph G {
     # ----------------------
     # Ocaml libraries
         # https://github.com/o1-labs/snarky
-        "snarky" [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white];
+        "snarky" [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white, href="./#snarky", target="_top"];
         "snarky" -> "R1CS";
         
     # -----------------------
@@ -19,11 +19,11 @@ digraph G {
         "Bellman" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
     
         # https://github.com/scipr-lab/zexe/
-        "zexe" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "zexe" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white, href="./#zexe", target="_top"];
 
         # https://doc-internal.dalek.rs/bulletproofs/index.html
         # https://github.com/dalek-cryptography/bulletproofs/
-        "dalek-cryptography" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "dalek-cryptography" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white, href="./#dalek-cryptography", target="_top"];
 
     # ----------------------
     # Compilers
@@ -70,7 +70,7 @@ digraph G {
         "R1CS" -> "DIZK";   # https://github.com/scipr-lab/dizk/tree/master/src/main/java/reductions/r1cs_to_qap
         "DIZK" -> "Gro16";  # https://github.com/scipr-lab/dizk/tree/master/src/main/java/zk_proof_systems/zkSNARK
 
-        "jsnark"  [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white];
+        "jsnark"  [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white, href="./#jsnark", target="_top"];
         
         # https://github.com/encryptogroup/UC/blob/master/src/bristol_to_SHDL.cpp
         "Bristol" -> "SHDL";
@@ -78,7 +78,7 @@ digraph G {
     # ---------------------
     # Javascript libraries
         # https://github.com/iden3/snarkjs
-        "snarkjs" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "snarkjs" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white, href="./#snarkjs", target="_top"];
     
     # -------------------------
     # MPC / Garbled Circuit libraries

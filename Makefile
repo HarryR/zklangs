@@ -13,4 +13,4 @@ serve:
 	bundle exec jekyll serve
 
 css/syntax.css:
-	bundle exec rougify style github > $@
+	bundle exec rougify style monokai.sublime > $@

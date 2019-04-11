@@ -7,7 +7,6 @@ permalink: /
 # High-Level languages for zkSNARKs, Fully-Homomorphic-Encryption and Multi-Party-Computation
 
 <object width="100%" data="hll-graph.svg" type="image/svg+xml"></object>
-![High-Level-Graph](hll-graph.svg)
 
 # zkSNARKs
 
@@ -22,6 +21,13 @@ permalink: /
  * Pepper Project - https://github.com/pepper-project/
  * Circom - https://github.com/iden3/circom
  * ZoKrates - https://github.com/Zokrates/ZoKrates
+
+## Forms
+
+### QAP
+
+ * https://www.di.ens.fr/~nitulesc/files/slides/QAP.pdf
+ * https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649
 
 ## Proving Systems
 
