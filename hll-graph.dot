@@ -8,7 +8,7 @@ digraph G {
     # -----------------------
     # Haskell libraries
         # https://github.com/adjoint-io/bulletproofs/
-        "adjoint-io/bulletproofs" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white];
+        "adjoint-io/bulletproofs" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white, href="./#adjoint-iobulletproofs", target="_top"];
         "adjoint-io/bulletproofs" -> "Bulletproofs";
     
     # ----------------------
@@ -28,7 +28,7 @@ digraph G {
     # ----------------------
     # Compilers
         # https://gitlab.com/securityengineering/CBMC-GC-2
-        "CBMC-GC-2" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white];
+        "CBMC-GC-2" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white, href="./#cbmc-gc-2", target="_top"];
         "C" -> "CBMC-GC-2";
         "CBMC-GC-2" -> "Bristol";
         "CBMC-GC-2" -> "SHDL";
@@ -95,12 +95,12 @@ digraph G {
     # ------------------
     # Underlying technologies
         # https://eprint.iacr.org/2017/1066.pdf
-        "Bulletproofs" [shape=box, fillcolor=cornsilk3, style=filled];
+        "Bulletproofs" [shape=box, fillcolor=cornsilk3, style=filled, href="./#bulletproofs", target="_top"];
 
         "zkSNARK" [shape=box, fillcolor=cornsilk3, style=filled];
 
         # https://github.com/hyraxZK/hyraxZK
-        "Hyrax" [shape=box, fillcolor=cornsilk3, style=filled];
+        "Hyrax" [shape=box, fillcolor=cornsilk3, style=filled, href="./#hyrax", target="_top"];
     
     # ------------------
     # High-level languages
@@ -140,7 +140,7 @@ digraph G {
         "Pinocchio" [shape=box, fillcolor=cyan, style=filled, href="./#pinocchio", target="_top"];
         
         "Prover Worksheet" [shape=box, fillcolor=cyan, style=filled, href="./#prover-worksheet", target="_top"];
-        "R1CS" [shape=box, fillcolor=blue, style=filled, fontcolor=white];
+        "R1CS" [shape=box, fillcolor=cyan, style=filled];
         
         # https://homes.esat.kuleuven.be/~nsmart/MPC/
         "Bristol" [shape=box, fillcolor=cyan, style=filled, href="./#bristol", target="_top"];
@@ -160,16 +160,16 @@ digraph G {
     # zkSNARK algorithms / papers
     subgraph cluster_6 {
         # https://eprint.iacr.org/2016/260.pdf
-        "Gro16" [fillcolor=burlywood2, style=filled];
+        "Gro16" [fillcolor=burlywood2, style=filled, href="./#gro16", target="_top"];
         
         # https://github.com/zknuckles/sonic
-        "SONIC" [fillcolor=burlywood2, style=filled];
+        "SONIC" [fillcolor=burlywood2, style=filled, href="./#sonic", target="_top"];
     
         # https://eprint.iacr.org/2013/279.pdf
-        "PGHR13" [fillcolor=burlywood2, style=filled];
+        "GGPR13" [fillcolor=burlywood2, style=filled, href="./#ggpr13", target="_top"];
     
         # https://eprint.iacr.org/2017/540.pdf
-        "GM17" [fillcolor=burlywood2, style=filled];
+        "GM17" [fillcolor=burlywood2, style=filled, href="./#gro16", target="_top"];
     }
     
     subgraph cluster_7 {
@@ -188,15 +188,15 @@ digraph G {
     "zexe" -> "GM17";
     "libsnark" -> "GM17";
     "libsnark" -> "Gro16";
-    "libsnark" -> "PGHR13";
+    "libsnark" -> "GGPR13";
     "snarkjs" -> "Gro16";
-    "snarkjs" -> "PGHR13";
+    "snarkjs" -> "GGPR13";
     "Bellman" -> "SONIC";
     "SONIC" -> "zkSNARK";
     "Bellman" -> "Gro16";
     "Bellman" -> "GM17";
     
-    "PGHR13" -> "QAP";
+    "GGPR13" -> "QAP";
 
     "GM17" -> "SAP";
     "SAP" -> "zkSNARK";

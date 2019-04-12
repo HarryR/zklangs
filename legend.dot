@@ -1,0 +1,16 @@
+digraph G {
+    subgraph cluster_legend {
+        label="legend";
+        style="filled";
+        color="gray96";
+
+        "Frameworks" [shape=box, fillcolor=chocolate1, style=filled, fontcolor=white, href="./#frameworks", target="_top"];
+        "Compilers" [shape=box, fillcolor=darkolivegreen4, style=filled, fontcolor=white, href="./#compilers", target="_top"];
+        "Languages" [shape=box, fillcolor=gold, style=filled, href="./#languages", target="_top"];
+        "Libraries" [shape=box, fillcolor=burlywood4, style=filled, fontcolor=white, href="./#libraries", target="_top"];
+        "Intermediate Format" [shape=box, fillcolor=cyan, style=filled, href="./#intermediate-formats", target="_top"];
+        "Technologies" [shape=box, fillcolor=cornsilk3, style=filled, href="./#technologies", target="_top"];
+        "Proving Systems" [fillcolor=burlywood2, style=filled, href="./#proving-systems", target="_top"];
+        "Algebraic Form" [fillcolor=bisque, style=filled, href="./#forms", target="_top"];
+    }
+}

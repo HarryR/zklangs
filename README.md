@@ -7,6 +7,7 @@ permalink: /
 # High-Level languages for zkSNARKs, Fully-Homomorphic-Encryption and Multi-Party-Computation
 
 <object width="100%" data="hll-graph.svg" type="image/svg+xml"></object>
+<object width="100%" data="legend.svg" type="image/svg+xml"></object>
 
 # zkSNARKs
 
@@ -33,10 +34,86 @@ permalink: /
 
  * [Gro16](https://eprint.iacr.org/2016/260.pdf)
  * [SONIC](https://github.com/zknuckles/sonic)
- * [PGHR13](https://eprint.iacr.org/2013/279.pdf)
+ * [GGPR13](https://eprint.iacr.org/2012/215.pdf)
  * [GM17](https://eprint.iacr.org/2017/540.pdf)
 
-# High Level Languages
+## Technologies
+
+## Hyrax
+
+[Hyrax](https://eprint.iacr.org/2017/1132) is a doubly-efficient (meaning, for both the prover and the verifier) zkSNARK which requires no trusted setup.
+
+The source-code is available at: https://github.com/hyraxZK/hyraxZK
+
+Hyrax uses [Prover Worksheet](#prover-worksheet) as an intermediate form.
+
+## zkSNARKs
+
+ * https://blog.coinfabrik.com/wp-content/uploads/2018/12/zkSNARKexplained.pdf
+
+## Bulletproofs
+
+https://eprint.iacr.org/2017/1066.pdf
+
+https://crypto.stanford.edu/bulletproofs/
+
+> Bulletproofs are short non-interactive zero-knowledge proofs that require no trusted setup. A bulletproof can be used to convince a verifier that an encrypted plaintext is well formed. For example, prove that an encrypted number is in a given range, without revealing anything else about the number. Compared to [SNARKs](https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6), Bulletproofs require no trusted setup. However, verifying a bulletproof is more time consuming than verifying a SNARK proof.
+
+Implemented in the following libraries:
+
+ * [adjoint-io/bulletproofs](#adjoint-iobulletproofs)
+ * [dalek-cryptography](#dalek-cryptography)
+ * [libsecp256k1](#libsecp256k1-mw)
+
+# Proving Systems
+
+## SONIC
+
+https://github.com/zknuckles/sonic
+
+## Gro16
+
+https://eprint.iacr.org/2016/260.pdf
+
+## GGPR13
+
+ * [Quadratic Span Programs and Succinct NIZKs without PCPs](https://eprint.iacr.org/2013/279.pdf)
+
+## GM17
+
+ * [Snarky Signatures: Minimal Signatures of Knowledge from Simulation-Extractable SNARKs](https://eprint.iacr.org/2017/540.pdf)
+
+# Libraries
+
+## adjoint-io/bulletproofs
+
+A Haskell library from [Adjoint.io](https://www.adjoint.io/) which implements range proofs, inner product range proofs, aggregate logarithmic proofs and subsequently arithmetic circuits using Bulletproofs.
+
+ * [Source code on GitHub](https://github.com/adjoint-io/bulletproofs/)
+ * Apache License, 2.0
+
+## dalek-cryptography
+
+> A pure-Rust implementation of Bulletproofs using Ristretto.
+>
+> The fastest Bulletproofs implementation ever, featuring single and aggregated range proofs, strongly-typed multiparty computation, and a programmable constraint system API for proving arbitrary statements (under development).
+>
+> This library implements Bulletproofs using [Ristretto](https://ristretto.group/), using the `ristretto255` implementation in `[curve25519-dalek](https://doc.dalek.rs/curve25519_dalek/index.html)`. When using the [parallel formulas](https://medium.com/@hdevalence/accelerating-edwards-curve-arithmetic-with-parallel-formulas-ac12cf5015be) in the `curve25519-dalek` AVX2 backend, it can verify 64-bit rangeproofs **approximately twice as fast** as the original `libsecp256k1`-based Bulletproofs implementation.
+
+ * [Source code](https://github.com/dalek-cryptography/bulletproofs/)
+ * MIT License
+
+# Compilers
+
+## CBMC-GC-2
+
+> [CBMC-GC](http://dx.doi.org/10.1145/2382196.2382278) is a compiler for C programs in the context of [secure two-party computation (STC)](http://dx.doi.org/10.1109/SFCS.1982.38). It compiles a C program that specifies a secure computation into a circuit which can be read in by an STC platform, which then performs the secure computation between two parties A and B:
+
+![Toolchain Overview](https://forsyte.at/wp-content/uploads/cbmc-gc-tool-chain.jpg)
+
+ * [Source code](https://gitlab.com/securityengineering/CBMC-GC-2)
+
+# Languages
 
 ## C
 
@@ -111,7 +188,7 @@ func gt(X : 2, Y : 2) = \
 func out = gt(A, B)
 ```
 
-# Intermediate Forms
+# Intermediate Formats
 
 Intermediate forms are simplified low-level representations which require little to no complex parsing.
 
@@ -176,20 +253,20 @@ w5 = XOR(w3, w4)
 
 ### Examples:
 
- * https://homes.esat.kuleuven.be/~nsmart/MPC/AES-non-expanded.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/AES-expanded.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/DES-non-expanded.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/DES-expanded.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/md5.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/sha-1.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/sha-256.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/adder_32bit.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/adder_64bit.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/mult_32x32.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_signed_lteq.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_signed_lt.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_unsigned_lteq.txt
- * https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_unsigned_lt.txt
+ * [AES-non-expanded](https://homes.esat.kuleuven.be/~nsmart/MPC/AES-non-expanded.txt)
+ * [AES-expanded](https://homes.esat.kuleuven.be/~nsmart/MPC/AES-expanded.txt)
+ * [DES-non-expanded](https://homes.esat.kuleuven.be/~nsmart/MPC/DES-non-expanded.txt)
+ * [DES-expanded](https://homes.esat.kuleuven.be/~nsmart/MPC/DES-expanded.txt)
+ * [md5](https://homes.esat.kuleuven.be/~nsmart/MPC/md5.txt)
+ * [sha-1](https://homes.esat.kuleuven.be/~nsmart/MPC/sha-1.txt)
+ * [sha-256](https://homes.esat.kuleuven.be/~nsmart/MPC/sha-256.txt)
+ * [adder_32bit](https://homes.esat.kuleuven.be/~nsmart/MPC/adder_32bit.txt)
+ * [adder_64bit](https://homes.esat.kuleuven.be/~nsmart/MPC/adder_64bit.txt)
+ * [mult_32x32](https://homes.esat.kuleuven.be/~nsmart/MPC/mult_32x32.txt)
+ * [comparator_32bit_signed_lteq](https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_signed_lteq.txt)
+ * [comparator_32bit_signed_lt](https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_signed_lt.txt)
+ * [comparator_32bit_unsigned_lteq](https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_unsigned_lteq.txt)
+ * [comparator_32bit_unsigned_lt](https://homes.esat.kuleuven.be/~nsmart/MPC/comparator_32bit_unsigned_lt.txt)
 
 ### Converts to
 

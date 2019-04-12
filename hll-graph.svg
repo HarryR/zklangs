@@ -20,14 +20,17 @@
 <!-- snarky -->
 <g id="node1" class="node">
 <title>snarky</title>
+<g id="a_node1"><a xlink:href="./#snarky" xlink:title="snarky" target="_top">
 <polygon fill="#ff7f24" stroke="#000000" points="243.9385,-396 189.9385,-396 189.9385,-360 243.9385,-360 243.9385,-396"/>
 <text text-anchor="middle" x="216.9385" y="-373.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">snarky</text>
+</a>
+</g>
 </g>
 <!-- R1CS -->
 <g id="node2" class="node">
 <title>R1CS</title>
-<polygon fill="#0000ff" stroke="#000000" points="317.9385,-324 263.9385,-324 263.9385,-288 317.9385,-288 317.9385,-324"/>
-<text text-anchor="middle" x="290.9385" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">R1CS</text>
+<polygon fill="#00ffff" stroke="#000000" points="317.9385,-324 263.9385,-324 263.9385,-288 317.9385,-288 317.9385,-324"/>
+<text text-anchor="middle" x="290.9385" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">R1CS</text>
 </g>
 <!-- snarky&#45;&gt;R1CS -->
 <g id="edge1" class="edge">
@@ -50,8 +53,11 @@
 <!-- zexe -->
 <g id="node6" class="node">
 <title>zexe</title>
+<g id="a_node6"><a xlink:href="./#zexe" xlink:title="zexe" target="_top">
 <polygon fill="#8b7355" stroke="#000000" points="369.9385,-252 315.9385,-252 315.9385,-216 369.9385,-216 369.9385,-252"/>
 <text text-anchor="middle" x="342.9385" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">zexe</text>
+</a>
+</g>
 </g>
 <!-- R1CS&#45;&gt;zexe -->
 <g id="edge27" class="edge">
@@ -62,8 +68,11 @@
 <!-- dalek&#45;cryptography -->
 <g id="node7" class="node">
 <title>dalek&#45;cryptography</title>
+<g id="a_node7"><a xlink:href="./#dalek-cryptography" xlink:title="dalek&#45;cryptography" target="_top">
 <polygon fill="#8b7355" stroke="#000000" points="595.5601,-252 470.3168,-252 470.3168,-216 595.5601,-216 595.5601,-252"/>
 <text text-anchor="middle" x="532.9385" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">dalek&#45;cryptography</text>
+</a>
+</g>
 </g>
 <!-- R1CS&#45;&gt;dalek&#45;cryptography -->
 <g id="edge46" class="edge">
@@ -98,8 +107,11 @@
 <!-- snarkjs -->
 <g id="node24" class="node">
 <title>snarkjs</title>
+<g id="a_node24"><a xlink:href="./#snarkjs" xlink:title="snarkjs" target="_top">
 <polygon fill="#8b7355" stroke="#000000" points="145.6016,-252 90.2753,-252 90.2753,-216 145.6016,-216 145.6016,-252"/>
 <text text-anchor="middle" x="117.9385" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">snarkjs</text>
+</a>
+</g>
 </g>
 <!-- R1CS&#45;&gt;snarkjs -->
 <g id="edge51" class="edge">
@@ -110,14 +122,20 @@
 <!-- adjoint&#45;io/bulletproofs -->
 <g id="node3" class="node">
 <title>adjoint&#45;io/bulletproofs</title>
+<g id="a_node3"><a xlink:href="./#adjoint-iobulletproofs" xlink:title="adjoint&#45;io/bulletproofs" target="_top">
 <polygon fill="#8b7355" stroke="#000000" points="566.918,-108 424.959,-108 424.959,-72 566.918,-72 566.918,-108"/>
 <text text-anchor="middle" x="495.9385" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">adjoint&#45;io/bulletproofs</text>
+</a>
+</g>
 </g>
 <!-- Bulletproofs -->
 <g id="node4" class="node">
 <title>Bulletproofs</title>
+<g id="a_node4"><a xlink:href="./#bulletproofs" xlink:title="Bulletproofs" target="_top">
 <polygon fill="#cdc8b1" stroke="#000000" points="637.9316,-36 551.9453,-36 551.9453,0 637.9316,0 637.9316,-36"/>
 <text text-anchor="middle" x="594.9385" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Bulletproofs</text>
+</a>
+</g>
 </g>
 <!-- adjoint&#45;io/bulletproofs&#45;&gt;Bulletproofs -->
 <g id="edge2" class="edge">
@@ -128,8 +146,11 @@
 <!-- Gro16 -->
 <g id="node22" class="node">
 <title>Gro16</title>
+<g id="a_node22"><a xlink:href="./#gro16" xlink:title="Gro16" target="_top">
 <ellipse fill="#eec591" stroke="#000000" cx="247.9385" cy="-162" rx="32.9081" ry="18"/>
 <text text-anchor="middle" x="247.9385" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Gro16</text>
+</a>
+</g>
 </g>
 <!-- Bellman&#45;&gt;Gro16 -->
 <g id="edge36" class="edge">
@@ -140,8 +161,11 @@
 <!-- SONIC -->
 <g id="node38" class="node">
 <title>SONIC</title>
+<g id="a_node38"><a xlink:href="./#sonic" xlink:title="SONIC" target="_top">
 <ellipse fill="#eec591" stroke="#000000" cx="419.9385" cy="-162" rx="36.7836" ry="18"/>
 <text text-anchor="middle" x="419.9385" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">SONIC</text>
+</a>
+</g>
 </g>
 <!-- Bellman&#45;&gt;SONIC -->
 <g id="edge34" class="edge">
@@ -152,8 +176,11 @@
 <!-- GM17 -->
 <g id="node40" class="node">
 <title>GM17</title>
+<g id="a_node40"><a xlink:href="./#gro16" xlink:title="GM17" target="_top">
 <ellipse fill="#eec591" stroke="#000000" cx="331.9385" cy="-162" rx="33.4012" ry="18"/>
 <text text-anchor="middle" x="331.9385" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">GM17</text>
+</a>
+</g>
 </g>
 <!-- Bellman&#45;&gt;GM17 -->
 <g id="edge37" class="edge">
@@ -176,14 +203,20 @@
 <!-- CBMC&#45;GC&#45;2 -->
 <g id="node8" class="node">
 <title>CBMC&#45;GC&#45;2</title>
+<g id="a_node8"><a xlink:href="./#cbmc-gc-2" xlink:title="CBMC&#45;GC&#45;2" target="_top">
 <polygon fill="#6e8b3d" stroke="#000000" points="444.1732,-612 351.7038,-612 351.7038,-576 444.1732,-576 444.1732,-612"/>
 <text text-anchor="middle" x="397.9385" y="-589.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">CBMC&#45;GC&#45;2</text>
+</a>
+</g>
 </g>
 <!-- Bristol -->
 <g id="node10" class="node">
 <title>Bristol</title>
+<g id="a_node10"><a xlink:href="./#bristol" xlink:title="Bristol" target="_top">
 <polygon fill="#00ffff" stroke="#000000" points="453.0558,-540 398.8212,-540 398.8212,-504 453.0558,-504 453.0558,-540"/>
 <text text-anchor="middle" x="425.9385" y="-517.8" font-family="Times,serif" font-size="14.00" fill="#000000">Bristol</text>
+</a>
+</g>
 </g>
 <!-- CBMC&#45;GC&#45;2&#45;&gt;Bristol -->
 <g id="edge4" class="edge">
@@ -194,8 +227,11 @@
 <!-- SHDL -->
 <g id="node11" class="node">
 <title>SHDL</title>
+<g id="a_node11"><a xlink:href="./#shdl" xlink:title="SHDL" target="_top">
 <polygon fill="#00ffff" stroke="#000000" points="541.9385,-468 487.9385,-468 487.9385,-432 541.9385,-432 541.9385,-468"/>
 <text text-anchor="middle" x="514.9385" y="-445.8" font-family="Times,serif" font-size="14.00" fill="#000000">SHDL</text>
+</a>
+</g>
 </g>
 <!-- CBMC&#45;GC&#45;2&#45;&gt;SHDL -->
 <g id="edge5" class="edge">
@@ -206,8 +242,11 @@
 <!-- SCD -->
 <g id="node12" class="node">
 <title>SCD</title>
+<g id="a_node12"><a xlink:href="./#scd" xlink:title="SCD" target="_top">
 <polygon fill="#00ffff" stroke="#000000" points="401.9385,-468 347.9385,-468 347.9385,-432 401.9385,-432 401.9385,-468"/>
 <text text-anchor="middle" x="374.9385" y="-445.8" font-family="Times,serif" font-size="14.00" fill="#000000">SCD</text>
+</a>
+</g>
 </g>
 <!-- CBMC&#45;GC&#45;2&#45;&gt;SCD -->
 <g id="edge6" class="edge">
@@ -281,8 +320,11 @@
 <!-- Pinocchio -->
 <g id="node34" class="node">
 <title>Pinocchio</title>
+<g id="a_node34"><a xlink:href="./#pinocchio" xlink:title="Pinocchio" target="_top">
 <polygon fill="#00ffff" stroke="#000000" points="699.9316,-396 627.9453,-396 627.9453,-360 699.9316,-360 699.9316,-396"/>
 <text text-anchor="middle" x="663.9385" y="-373.8" font-family="Times,serif" font-size="14.00" fill="#000000">Pinocchio</text>
+</a>
+</g>
 </g>
 <!-- SHDL&#45;&gt;Pinocchio -->
 <g id="edge19" class="edge">
@@ -383,15 +425,18 @@
 <path fill="none" stroke="#000000" d="M262.144,-215.8314C260.058,-207.9266 257.5671,-198.4872 255.2578,-189.7365"/>
 <polygon fill="#000000" stroke="#000000" points="258.6014,-188.6894 252.6656,-179.9134 251.8331,-190.4755 258.6014,-188.6894"/>
 </g>
-<!-- PGHR13 -->
+<!-- GGPR13 -->
 <g id="node39" class="node">
-<title>PGHR13</title>
+<title>GGPR13</title>
+<g id="a_node39"><a xlink:href="./#ggpr13" xlink:title="GGPR13" target="_top">
 <ellipse fill="#eec591" stroke="#000000" cx="154.9385" cy="-162" rx="42.5802" ry="18"/>
-<text text-anchor="middle" x="154.9385" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">PGHR13</text>
+<text text-anchor="middle" x="154.9385" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">GGPR13</text>
+</a>
 </g>
-<!-- libsnark&#45;&gt;PGHR13 -->
+</g>
+<!-- libsnark&#45;&gt;GGPR13 -->
 <g id="edge31" class="edge">
-<title>libsnark&#45;&gt;PGHR13</title>
+<title>libsnark&#45;&gt;GGPR13</title>
 <path fill="none" stroke="#000000" d="M238.6761,-215.8314C223.0384,-205.7785 203.54,-193.2439 187.2939,-182.7999"/>
 <polygon fill="#000000" stroke="#000000" points="188.9525,-179.7053 178.648,-177.2418 185.1671,-185.5936 188.9525,-179.7053"/>
 </g>
@@ -410,8 +455,11 @@
 <!-- andytoshi -->
 <g id="node20" class="node">
 <title>andytoshi</title>
+<g id="a_node20"><a xlink:href="./#andytoshi" xlink:title="andytoshi" target="_top">
 <polygon fill="#00ffff" stroke="#000000" points="722.3813,-180 651.4957,-180 651.4957,-144 722.3813,-144 722.3813,-180"/>
 <text text-anchor="middle" x="686.9385" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">andytoshi</text>
+</a>
+</g>
 </g>
 <!-- bulletproofs_preprocess&#45;&gt;andytoshi -->
 <g id="edge9" class="edge">
@@ -440,8 +488,11 @@
 <!-- jsnark -->
 <g id="node23" class="node">
 <title>jsnark</title>
+<g id="a_node23"><a xlink:href="./#jsnark" xlink:title="jsnark" target="_top">
 <polygon fill="#ff7f24" stroke="#000000" points="698.9385,-468 644.9385,-468 644.9385,-432 698.9385,-432 698.9385,-468"/>
 <text text-anchor="middle" x="671.9385" y="-445.8" font-family="Times,serif" font-size="14.00" fill="#ffffff">jsnark</text>
+</a>
+</g>
 </g>
 <!-- jsnark&#45;&gt;Pinocchio -->
 <g id="edge43" class="edge">
@@ -455,9 +506,9 @@
 <path fill="none" stroke="#000000" d="M145.938,-220.3226C163.6373,-211.4824 186.8758,-199.5163 206.9385,-188 210.6391,-185.8758 214.4795,-183.5749 218.2597,-181.2504"/>
 <polygon fill="#000000" stroke="#000000" points="220.2581,-184.1286 226.8765,-175.8554 216.5434,-178.1955 220.2581,-184.1286"/>
 </g>
-<!-- snarkjs&#45;&gt;PGHR13 -->
+<!-- snarkjs&#45;&gt;GGPR13 -->
 <g id="edge33" class="edge">
-<title>snarkjs&#45;&gt;PGHR13</title>
+<title>snarkjs&#45;&gt;GGPR13</title>
 <path fill="none" stroke="#000000" d="M127.2751,-215.8314C131.4698,-207.6688 136.5053,-197.87 141.1237,-188.8827"/>
 <polygon fill="#000000" stroke="#000000" points="144.2752,-190.4075 145.733,-179.9134 138.0492,-187.208 144.2752,-190.4075"/>
 </g>
@@ -470,8 +521,11 @@
 <!-- Hyrax -->
 <g id="node28" class="node">
 <title>Hyrax</title>
+<g id="a_node28"><a xlink:href="./#hyrax" xlink:title="Hyrax" target="_top">
 <polygon fill="#cdc8b1" stroke="#000000" points="243.9385,-468 189.9385,-468 189.9385,-432 243.9385,-432 243.9385,-468"/>
 <text text-anchor="middle" x="216.9385" y="-445.8" font-family="Times,serif" font-size="14.00" fill="#000000">Hyrax</text>
+</a>
+</g>
 </g>
 <!-- xjsnark -->
 <g id="node29" class="node">
@@ -566,8 +620,11 @@
 <!-- Prover Worksheet -->
 <g id="node35" class="node">
 <title>Prover Worksheet</title>
+<g id="a_node35"><a xlink:href="./#prover-worksheet" xlink:title="Prover Worksheet" target="_top">
 <polygon fill="#00ffff" stroke="#000000" points="267.044,-540 150.833,-540 150.833,-504 267.044,-504 267.044,-540"/>
 <text text-anchor="middle" x="208.9385" y="-517.8" font-family="Times,serif" font-size="14.00" fill="#000000">Prover Worksheet</text>
+</a>
+</g>
 </g>
 <!-- Prover Worksheet&#45;&gt;R1CS -->
 <g id="edge57" class="edge">
@@ -599,9 +656,9 @@
 <path fill="none" stroke="#000000" d="M410.3059,-144.4888C399.0497,-124.4722 379.4665,-90.9923 359.9385,-64 355.1055,-57.3198 349.5555,-50.3965 344.1868,-44.0119"/>
 <polygon fill="#000000" stroke="#000000" points="346.717,-41.5857 337.5512,-36.2717 341.4026,-46.1418 346.717,-41.5857"/>
 </g>
-<!-- PGHR13&#45;&gt;QAP -->
+<!-- GGPR13&#45;&gt;QAP -->
 <g id="edge38" class="edge">
-<title>PGHR13&#45;&gt;QAP</title>
+<title>GGPR13&#45;&gt;QAP</title>
 <path fill="none" stroke="#000000" d="M175.5782,-146.0209C189.1771,-135.4927 207.1028,-121.6147 221.71,-110.3059"/>
 <polygon fill="#000000" stroke="#000000" points="224.1046,-112.8784 229.8693,-103.9891 219.8194,-107.3433 224.1046,-112.8784"/>
 </g>

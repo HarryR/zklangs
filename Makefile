@@ -1,9 +1,9 @@
-all: hll-graph.png hll-graph.svg vendor/bundle css/syntax.css
+all: hll-graph.png hll-graph.svg legend.svg vendor/bundle css/syntax.css
 
-hll-graph.png: hll-graph.dot
+%.png: %.dot
 	dot -Tpng $< -o $@
 
-hll-graph.svg: hll-graph.dot
+%.svg: %.dot
 	dot -Tsvg $< -o $@
 
 vendor/bundle:
